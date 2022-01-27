@@ -11,7 +11,7 @@ const app = new Vue({
 			'images/image2.jpg',
 			'images/image3.jpg',
 			'images/image4.jpg',
-		]
+		],
 	},
 	methods: {
 		nextImage() {
@@ -20,5 +20,11 @@ const app = new Vue({
 		prevImage() {
 			this.currentImage === 0 ? this.currentImage = this.images.length - 1 : this.currentImage--;
 		},
+		isActive(index) {
+			return (index === this.currentImage);
+		},
+		setImage(index) {
+			this.currentImage = index;
+		}
 	}
 })
