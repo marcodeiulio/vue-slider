@@ -15,7 +15,6 @@
 
 <body>
   <div id="root">
-    <h1>{{message}} </h1>
     <div class="container vh-100">
       <div class="row">
         <div class="col-3 d-flex align-items-center justify-content-center">
@@ -23,7 +22,7 @@
         </div>
         <div class="col-6">
           <div class="slider d-flex align-items-center">
-            <img class="img-fluid" src="images/image1.jpg" alt="" />
+            <img v-for="(image, index) in images" class="img-fluid" :src="image" :alt="'image ' + index" />
             <div class="slider-dots">
               <div class="dot mx-2 active"></div>
               <div class="dot mx-2"></div>
