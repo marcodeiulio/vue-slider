@@ -25,6 +25,12 @@ const app = new Vue({
 		},
 		setImage(index) {
 			this.currentImage = index;
+		},
+		autoPlay() {
+			setInterval(this.nextImage, 3000);
 		}
-	}
+	},
+	created() {
+		this.autoPlay();
+	},
 })
