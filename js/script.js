@@ -12,5 +12,13 @@ const app = new Vue({
 			'images/image3.jpg',
 			'images/image4.jpg',
 		]
+	},
+	methods: {
+		nextImage() {
+			this.currentImage === this.images.length - 1 ? this.currentImage = 0 : this.currentImage++;
+		},
+		prevImage() {
+			this.currentImage === 0 ? this.currentImage = this.images.length - 1 : this.currentImage--;
+		},
 	}
 })
